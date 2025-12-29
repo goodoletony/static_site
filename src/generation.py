@@ -18,8 +18,8 @@ def generate_page(from_path, template_path, dest_path, base_path):
     title = extract_title(md_file)
     new_template = template.replace("{{ Title }}", title)
     new_template = new_template.replace("{{ Content }}", html_string)
-    new_template = new_template.replace('href="/', f'href="{base_path}"')
-    new_template = new_template.replace('src="/', f'src="{base_path}"')
+    new_template = new_template.replace('href="/', f'href="{base_path}')
+    new_template = new_template.replace('src="/', f'src="{base_path}')
 
     dest_dir = os.path.dirname(dest_path)
 
